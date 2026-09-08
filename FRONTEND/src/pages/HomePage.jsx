@@ -31,8 +31,8 @@ function HomePage() {
           </h1>
 
           <p className="mt-6 max-w-2xl text-base leading-7 text-[#9eada7] sm:text-lg">
-            An intelligent landslide risk monitoring and early-warning
-            platform designed for the North Eastern Region of India.
+            An intelligent landslide risk monitoring and early-warning platform
+            designed for the North Eastern Region of India.
           </p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -174,9 +174,7 @@ function HomePage() {
       <footer className="mx-auto flex w-[calc(100%-28px)] max-w-300 flex-col gap-5 border-t border-white/10 py-9 text-xs text-[#64726d] md:w-[calc(100%-40px)] md:flex-row md:items-center md:justify-between">
         <div className="flex flex-col gap-1">
           <strong className="text-[#aab7b1]">LandslideGuard</strong>
-          <span>
-            AI-Based Early Warning & Landslide Risk Monitoring System
-          </span>
+          <span>AI-Based Early Warning & Landslide Risk Monitoring System</span>
         </div>
 
         <span>SIH26001 • North Eastern Region of India</span>
@@ -235,9 +233,7 @@ function WorkflowCard({ icon, number, title, description }) {
           {icon}
         </div>
 
-        <span className="font-display text-2xl text-[#43524c]">
-          {number}
-        </span>
+        <span className="font-display text-2xl text-[#43524c]">{number}</span>
       </div>
 
       <h3 className="mt-6 font-display text-lg font-bold">{title}</h3>
