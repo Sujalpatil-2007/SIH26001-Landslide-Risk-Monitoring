@@ -67,8 +67,7 @@ const recentAlerts = [
 function DashboardPage() {
   return (
     <div className="min-h-screen bg-[#07110e] px-4 py-6 text-[#e8edf2] sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-[1400px]">
-
+      <div className="mx-auto max-w-350">
         {/* HEADER */}
         <div className="mb-8 flex flex-col justify-between gap-5 md:flex-row md:items-end">
           <div>
@@ -87,7 +86,7 @@ function DashboardPage() {
             </p>
           </div>
 
-          <div className="flex items-center gap-2 self-start rounded-lg border border-white/10 bg-white/[0.03] px-3 py-2 text-xs text-[#899790] md:self-auto">
+          <div className="flex items-center gap-2 self-start rounded-lg border border-white/10 bg-white/3 px-3 py-2 text-xs text-[#899790] md:self-auto">
             <span className="h-2 w-2 animate-pulse rounded-full bg-[#b8e986]" />
             System operational
           </div>
@@ -131,14 +130,11 @@ function DashboardPage() {
 
         {/* MAIN CHARTS */}
         <div className="mt-6 grid gap-6 xl:grid-cols-[1.7fr_1fr]">
-
           {/* RISK TREND */}
-          <section className="rounded-2xl border border-white/[0.07] bg-white/[0.025] p-5 sm:p-6">
+          <section className="rounded-2xl border border-white/[0.07] bg-white/2.5 p-5 sm:p-6">
             <div className="mb-6 flex items-start justify-between">
               <div>
-                <h2 className="font-display text-lg font-bold">
-                  Risk Trend
-                </h2>
+                <h2 className="font-display text-lg font-bold">Risk Trend</h2>
 
                 <p className="mt-1 text-xs text-[#71817a]">
                   Average predicted landslide probability
@@ -150,7 +146,7 @@ function DashboardPage() {
               </div>
             </div>
 
-            <div className="h-[280px] w-full">
+            <div className="h-70 w-full">
               <ResponsiveContainer width="100%" height="100%">
                 <AreaChart data={riskData}>
                   <defs>
@@ -161,14 +157,8 @@ function DashboardPage() {
                       x2="0"
                       y2="1"
                     >
-                      <stop
-                        offset="0%"
-                        stopOpacity={0.25}
-                      />
-                      <stop
-                        offset="100%"
-                        stopOpacity={0}
-                      />
+                      <stop offset="0%" stopOpacity={0.25} />
+                      <stop offset="100%" stopOpacity={0} />
                     </linearGradient>
                   </defs>
 
@@ -214,12 +204,10 @@ function DashboardPage() {
           </section>
 
           {/* CURRENT STATUS */}
-          <section className="rounded-2xl border border-white/[0.07] bg-white/[0.025] p-5 sm:p-6">
+          <section className="rounded-2xl border border-white/[0.07] bg-white/2.5 p-5 sm:p-6">
             <div className="flex items-center justify-between">
               <div>
-                <h2 className="font-display text-lg font-bold">
-                  Current Risk
-                </h2>
+                <h2 className="font-display text-lg font-bold">Current Risk</h2>
 
                 <p className="mt-1 text-xs text-[#71817a]">
                   Overall monitored region
@@ -230,13 +218,11 @@ function DashboardPage() {
             </div>
 
             <div className="mt-8 flex flex-col items-center">
-              <div className="relative grid h-48 w-48 place-items-center rounded-full border-[12px] border-[#b8e986]/20">
-                <div className="absolute inset-0 rounded-full border-[12px] border-transparent border-t-[#b8e986] border-r-[#b8e986] rotate-[-25deg]" />
+              <div className="relative grid h-48 w-48 place-items-center rounded-full border-12 border-[#b8e986]/20">
+                <div className="absolute inset-0 rounded-full border-12 border-transparent border-t-[#b8e986] border-r-[#b8e986] rotate-[-25deg]" />
 
                 <div className="text-center">
-                  <div className="font-display text-4xl font-bold">
-                    68.4%
-                  </div>
+                  <div className="font-display text-4xl font-bold">68.4%</div>
 
                   <div className="mt-1 text-xs text-[#81908a]">
                     Risk probability
@@ -249,15 +235,15 @@ function DashboardPage() {
               </div>
 
               <p className="mt-4 max-w-xs text-center text-xs leading-5 text-[#71817a]">
-                Current environmental conditions indicate increased
-                landslide potential.
+                Current environmental conditions indicate increased landslide
+                potential.
               </p>
             </div>
           </section>
         </div>
 
         {/* RAINFALL */}
-        <section className="mt-6 rounded-2xl border border-white/[0.07] bg-white/[0.025] p-5 sm:p-6">
+        <section className="mt-6 rounded-2xl border border-white/[0.07] bg-white/2.5 p-5 sm:p-6">
           <div className="mb-6">
             <h2 className="font-display text-lg font-bold">
               Rainfall Monitoring
@@ -268,7 +254,7 @@ function DashboardPage() {
             </p>
           </div>
 
-          <div className="h-[260px] w-full">
+          <div className="h-65 w-full">
             <ResponsiveContainer width="100%" height="100%">
               <AreaChart data={rainfallData}>
                 <defs>
@@ -279,14 +265,8 @@ function DashboardPage() {
                     x2="0"
                     y2="1"
                   >
-                    <stop
-                      offset="0%"
-                      stopOpacity={0.2}
-                    />
-                    <stop
-                      offset="100%"
-                      stopOpacity={0}
-                    />
+                    <stop offset="0%" stopOpacity={0.2} />
+                    <stop offset="100%" stopOpacity={0} />
                   </linearGradient>
                 </defs>
 
@@ -331,12 +311,10 @@ function DashboardPage() {
         </section>
 
         {/* ALERTS */}
-        <section className="mt-6 rounded-2xl border border-white/[0.07] bg-white/[0.025] p-5 sm:p-6">
+        <section className="mt-6 rounded-2xl border border-white/[0.07] bg-white/2.5 p-5 sm:p-6">
           <div className="mb-5 flex items-center justify-between">
             <div>
-              <h2 className="font-display text-lg font-bold">
-                Recent Alerts
-              </h2>
+              <h2 className="font-display text-lg font-bold">Recent Alerts</h2>
 
               <p className="mt-1 text-xs text-[#71817a]">
                 Latest AI-generated risk notifications
@@ -368,7 +346,7 @@ function StatCard({
   warning = false,
 }) {
   return (
-    <div className="rounded-2xl border border-white/[0.07] bg-white/[0.025] p-5 transition hover:border-white/[0.14]">
+    <div className="rounded-2xl border border-white/[0.07] bg-white/[2.5 p-5 transition hover:border-white/[0.14]">
       <div className="flex items-start justify-between">
         <div className="grid h-10 w-10 place-items-center rounded-xl bg-[#b8e986]/10 text-[#b8e986]">
           {icon}
@@ -386,13 +364,9 @@ function StatCard({
       <div className="mt-5">
         <p className="text-xs text-[#71817a]">{title}</p>
 
-        <div className="mt-1 font-display text-2xl font-bold">
-          {value}
-        </div>
+        <div className="mt-1 font-display text-2xl font-bold">{value}</div>
 
-        <p className="mt-1 text-[11px] text-[#596761]">
-          {description}
-        </p>
+        <p className="mt-1 text-[11px] text-[#596761]">{description}</p>
       </div>
     </div>
   );
@@ -403,7 +377,7 @@ function AlertRow({ alert }) {
   const isHigh = alert.level === "High";
 
   return (
-    <div className="flex flex-col gap-4 rounded-xl border border-white/[0.06] bg-black/10 p-4 transition hover:bg-white/[0.03] sm:flex-row sm:items-center sm:justify-between">
+    <div className="flex flex-col gap-4 rounded-xl border border-white/6 bg-black/10 p-4 transition hover:bg-white/3 sm:flex-row sm:items-center sm:justify-between">
       <div className="flex items-center gap-3">
         <div
           className={`grid h-10 w-10 shrink-0 place-items-center rounded-full ${
@@ -434,13 +408,11 @@ function AlertRow({ alert }) {
             </span>
           </div>
 
-          <p className="mt-1 text-[11px] text-[#64726d]">
-            {alert.time}
-          </p>
+          <p className="mt-1 text-[11px] text-[#64726d]">{alert.time}</p>
         </div>
       </div>
 
-      <div className="flex items-center gap-6 pl-[52px] sm:pl-0">
+      <div className="flex items-center gap-6 pl-13 sm:pl-0">
         <div>
           <p className="text-[10px] text-[#64726d]">Probability</p>
           <p className="mt-1 text-sm font-bold">{alert.probability}</p>
@@ -448,9 +420,7 @@ function AlertRow({ alert }) {
 
         <div className="h-8 w-px bg-white/10" />
 
-        <span className="text-xs font-medium text-[#b8e986]">
-          Active
-        </span>
+        <span className="text-xs font-medium text-[#b8e986]">Active</span>
       </div>
     </div>
   );
