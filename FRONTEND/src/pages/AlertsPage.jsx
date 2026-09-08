@@ -80,7 +80,7 @@ function AlertsPage() {
 
   return (
     <div className="min-h-screen bg-[#07110e] px-4 py-8 text-[#e8edf2] sm:px-6 lg:px-8">
-      <main className="mx-auto max-w-[1400px]">
+      <main className="mx-auto max-w-350">
         {/* HEADER */}
         <div className="mb-8">
           <div className="mb-2 flex items-center gap-2 text-xs font-semibold uppercase tracking-[2px] text-[#91b66e]">
@@ -100,7 +100,7 @@ function AlertsPage() {
               </p>
             </div>
 
-            <div className="flex items-center gap-2 rounded-lg border border-white/10 bg-white/[0.03] px-3 py-2 text-xs text-[#899790]">
+            <div className="flex items-center gap-2 rounded-lg border border-white/10 bg-white/3 px-3 py-2 text-xs text-[#899790]">
               <span className="h-2 w-2 animate-pulse rounded-full bg-[#b8e986]" />
               Live monitoring
             </div>
@@ -139,7 +139,7 @@ function AlertsPage() {
         </div>
 
         {/* ALERT LIST */}
-        <section className="mt-6 rounded-2xl border border-white/[0.07] bg-white/[0.025] p-5 sm:p-6">
+        <section className="mt-6 rounded-2xl border border-white/[0.07] bg-white/2.5 p-5 sm:p-6">
           <div className="mb-6 flex flex-col gap-3 border-b border-white/[0.07] pb-5 sm:flex-row sm:items-center sm:justify-between">
             <div>
               <h2 className="font-display text-lg font-bold">
@@ -173,7 +173,7 @@ function AlertsPage() {
 
 function SummaryCard({ icon, title, value, subtitle }) {
   return (
-    <div className="rounded-2xl border border-white/[0.07] bg-white/[0.025] p-5">
+    <div className="rounded-2xl border border-white/[0.07] bg-white/2.5 p-5">
       <div className="grid h-10 w-10 place-items-center rounded-xl bg-[#b8e986]/10 text-[#b8e986]">
         {icon}
       </div>
@@ -203,7 +203,7 @@ function AlertCard({ alert }) {
   }
 
   return (
-    <article className="rounded-xl border border-white/[0.06] bg-black/10 p-4 transition hover:border-white/[0.12] sm:p-5">
+    <article className="rounded-xl border border-white/6 bg-black/10 p-4 transition hover:border-white/12 sm:p-5">
       <div className="flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
         {/* LOCATION */}
         <div className="flex gap-4">
@@ -247,7 +247,7 @@ function AlertCard({ alert }) {
         </div>
 
         {/* PROBABILITY */}
-        <div className="flex shrink-0 items-center gap-6 border-t border-white/[0.06] pt-4 lg:border-t-0 lg:pt-0">
+        <div className="flex shrink-0 items-center gap-6 border-t border-white/6 pt-4 lg:border-t-0 lg:pt-0">
           <div>
             <p className="text-[10px] uppercase tracking-wider text-[#596761]">
               Probability
