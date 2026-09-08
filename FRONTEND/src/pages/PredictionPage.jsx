@@ -1,9 +1,5 @@
 import { useState } from "react";
-import {
-  ArrowLeft,
-  BrainCircuit,
-  Info,
-} from "lucide-react";
+import { ArrowLeft, BrainCircuit, Info } from "lucide-react";
 import { Link } from "react-router-dom";
 
 import PredictionForm from "../components/Prediction/PredictionForm";
@@ -39,10 +35,10 @@ function PredictionPage() {
           data.risk_level === "VERY HIGH"
             ? "Issue early warning and prioritize immediate monitoring."
             : data.risk_level === "HIGH"
-            ? "Increase monitoring and prepare an early warning."
-            : data.risk_level === "MODERATE"
-            ? "Continue monitoring the location."
-            : "Risk is currently low. Continue routine monitoring.",
+              ? "Increase monitoring and prepare an early warning."
+              : data.risk_level === "MODERATE"
+                ? "Continue monitoring the location."
+                : "Risk is currently low. Continue routine monitoring.",
       };
 
       setResult(predictionResult);
@@ -57,7 +53,6 @@ function PredictionPage() {
   return (
     <div className="min-h-screen bg-[#07110e] text-[#e8edf2]">
       <main className="mx-auto w-[calc(100%-28px)] max-w-350 py-8 md:w-[calc(100%-40px)]">
-
         {/* HEADER */}
         <div className="mb-8">
           <Link
@@ -80,20 +75,17 @@ function PredictionPage() {
               </h1>
 
               <p className="mt-2 max-w-2xl text-sm leading-6 text-[#7f918a]">
-                Enter environmental, geographical and geological conditions
-                to estimate the probability of a landslide.
+                Enter environmental, geographical and geological conditions to
+                estimate the probability of a landslide.
               </p>
             </div>
 
             <div className="flex items-start gap-2 rounded-xl border border-[#b8e986]/10 bg-[#b8e986]/5 p-4 text-xs text-[#8e9d96]">
-              <Info
-                size={16}
-                className="mt-0.5 shrink-0 text-[#b8e986]"
-              />
+              <Info size={16} className="mt-0.5 shrink-0 text-[#b8e986]" />
 
               <span>
-                Prediction uses the environmental features required by
-                the project's ML model.
+                Prediction uses the environmental features required by the
+                project's ML model.
               </span>
             </div>
           </div>
@@ -101,7 +93,6 @@ function PredictionPage() {
 
         {/* CONTENT */}
         <div className="grid items-start gap-6 xl:grid-cols-[1.55fr_.85fr]">
-
           {/* FORM */}
           <section className="rounded-2xl border border-white/[0.07] bg-white/2.5 p-5 sm:p-7">
             <div className="mb-8 border-b border-white/[0.07] pb-6">
@@ -114,10 +105,7 @@ function PredictionPage() {
               </p>
             </div>
 
-            <PredictionForm
-              onPredict={handlePredict}
-              loading={loading}
-            />
+            <PredictionForm onPredict={handlePredict} loading={loading} />
           </section>
 
           {/* RESULT */}
