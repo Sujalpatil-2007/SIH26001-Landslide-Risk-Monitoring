@@ -78,9 +78,9 @@ const workflow = [
 function AboutPage() {
   return (
     <div className="min-h-screen bg-[#07110e] text-[#e8edf2]">
-      <main className="mx-auto max-w-[1400px] px-4 py-10 sm:px-6 lg:px-8">
+      <main className="mx-auto max-w-350 px-4 py-10 sm:px-6 lg:px-8">
         {/* HERO */}
-        <section className="relative overflow-hidden rounded-3xl border border-white/[0.07] bg-white/[0.025] px-6 py-14 sm:px-10 lg:px-16 lg:py-20">
+        <section className="relative overflow-hidden rounded-3xl border border-white/[0.07] bg-white/2.5 px-6 py-14 sm:px-10 lg:px-16 lg:py-20">
           <div className="absolute -right-32 -top-32 h-80 w-80 rounded-full bg-[#b8e986]/5 blur-3xl" />
 
           <div className="relative max-w-4xl">
@@ -106,11 +106,11 @@ function AboutPage() {
                 AI / Machine Learning
               </span>
 
-              <span className="rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-xs font-medium text-[#a0aca7]">
+              <span className="rounded-full border border-white/10 bg-white/3 px-4 py-2 text-xs font-medium text-[#a0aca7]">
                 Early Warning
               </span>
 
-              <span className="rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-xs font-medium text-[#a0aca7]">
+              <span className="rounded-full border border-white/10 bg-white/3 px-4 py-2 text-xs font-medium text-[#a0aca7]">
                 Risk Monitoring
               </span>
             </div>
@@ -167,7 +167,7 @@ function AboutPage() {
             {features.map((feature) => (
               <div
                 key={feature.title}
-                className="rounded-2xl border border-white/[0.07] bg-white/[0.025] p-6 transition hover:-translate-y-1 hover:border-[#b8e986]/20"
+                className="rounded-2xl border border-white/[0.07] bg-white/2.5 p-6 transition hover:-translate-y-1 hover:border-[#b8e986]/20"
               >
                 <div className="grid h-11 w-11 place-items-center rounded-xl bg-[#b8e986]/10 text-[#b8e986]">
                   {feature.icon}
@@ -186,7 +186,7 @@ function AboutPage() {
         </section>
 
         {/* INPUT FEATURES */}
-        <section className="mt-16 rounded-3xl border border-white/[0.07] bg-white/[0.025] p-6 sm:p-8 lg:p-10">
+        <section className="mt-16 rounded-3xl border border-white/[0.07] bg-white/2.5 p-6 sm:p-8 lg:p-10">
           <SectionHeading
             eyebrow="ML Input Features"
             title="What the model analyzes"
@@ -212,7 +212,7 @@ function AboutPage() {
             ].map((item, index) => (
               <div
                 key={item}
-                className="flex items-center gap-3 rounded-xl border border-white/[0.06] bg-black/10 px-4 py-3"
+                className="flex items-center gap-3 rounded-xl border border-white/6 bg-black/10 px-4 py-3"
               >
                 <span className="text-[10px] font-bold text-[#91b66e]">
                   {(index + 1).toString().padStart(2, "0")}
@@ -238,7 +238,7 @@ function AboutPage() {
             {workflow.map((step) => (
               <div
                 key={step.number}
-                className="relative rounded-2xl border border-white/[0.07] bg-white/[0.025] p-6"
+                className="relative rounded-2xl border border-white/[0.07] bg-white/2.5 p-6"
               >
                 <span className="font-display text-3xl font-bold text-[#b8e986]/20">
                   {step.number}
@@ -314,7 +314,7 @@ function AboutPage() {
 
 function InfoSection({ icon, eyebrow, title, children }) {
   return (
-    <div className="rounded-2xl border border-white/[0.07] bg-white/[0.025] p-6 sm:p-8">
+    <div className="rounded-2xl border border-white/[0.07] bg-white/2.5 p-6 sm:p-8">
       <div className="flex items-center gap-3">
         <div className="grid h-10 w-10 place-items-center rounded-xl bg-[#b8e986]/10 text-[#b8e986]">
           {icon}
