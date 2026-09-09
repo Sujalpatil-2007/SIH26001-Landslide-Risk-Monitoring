@@ -15,8 +15,6 @@ import Navbar from "../components/common/Navbar";
 function HomePage() {
   return (
     <div className="min-h-screen bg-[#07110e] text-[#e8edf2]">
-      <Navbar />
-
       {/* HERO */}
       <section className="mx-auto grid min-h-170 w-[calc(100%-28px)] max-w-300 items-center gap-12 md:w-[calc(100%-40px)] lg:grid-cols-[1.05fr_.95fr]">
         <div className="py-16">
